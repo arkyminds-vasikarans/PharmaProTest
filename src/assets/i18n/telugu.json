@@ -1,0 +1,21 @@
+{
+  "PAGES": {
+    "HOME": {
+      "TITLE": "App works !"
+    }
+  },
+  "HOME": {
+    "HELLO": "hello"
+  },
+  "Sale": "అమ్మకానికి",
+  "SKU":{
+    "NAME":"పేరు",
+    "Manufacturer":"తయారీదారు",
+    "Form":"ఫారం",
+    "MRP":"ధర",
+    "InStock":"అందుబాటులో"
+  },
+  "Sidebar": {
+    "Dashboard": "డాష్బోర్డ్"
+  }
+}

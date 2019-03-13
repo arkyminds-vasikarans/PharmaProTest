@@ -1,0 +1,67 @@
+<div class="row card" style="width: 100%;">
+  <header class="card-header">
+    <div class="row align-bottom">
+      <div class="col-md-3">
+        Skus ({{recordsFound}} results found) | {{'Sale' | translate }}
+      </div>
+      <div class="col-md-6">
+        <div class="form-control-wrapper form-control-icon-right">
+          <input type="text" class="form-control form-control-rounded" placeholder="Search Sku" [(ngModel)]="searchStr"
+            (ngModelChange)="search($event)">
+          <i class="glyphicon glyphicon-search"></i>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="float-right">
+
+          <button type="button" class="tabledit-save-button btn btn-sm btn-warning" (click)="goToCreateSku()">
+            Add Sku
+          </button>
+          &nbsp;
+          <button type="button" class="tabledit-save-button btn btn-sm btn-info" (click)="refresh()">
+            <i class="panel-control-icon glyphicon glyphicon-refresh"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="card-block">
+    <table id="table-edit" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th width="1">
+            #
+          </th>
+          <th>{{'SKU.NAME' | translate }}</th>
+          <th>{{'SKU.Manufacturer' | translate }}</th>
+          <th>{{'SKU.Form' | translate }}</th>
+          <th>{{'SKU.MRP' | translate }}</th>
+          <th>{{'SKU.InStock' | translate }}</th>
+          <th>{{'SKU.Schedule' | translate }}</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="1" *ngFor="let eachSku of skus;let i=index;">
+          <td><span class="tabledit-span tabledit-identifier">{{eachSku.SkuId}}</span></td>
+          <td class="tabledit-view-mode">{{eachSku.SkuName}}</td>
+          <td class="tabledit-view-mode">{{eachSku.Manufacturer}}</td>
+          <td class="tabledit-view-mode">Tablets</td>
+          <td class="tabledit-view-mode">{{eachSku.MRP}}</td>
+          <td class="tabledit-view-mode">24</td>
+          <td class="tabledit-view-mode">X</td>
+          <td style="white-space: nowrap; width: 1%;">
+            <button type="button" class="tabledit-save-button btn btn-sm btn-success"
+              (click)="goToSkuEdit(eachSku.SkuId)"><i class="glyphicon glyphicon-pencil"></i></button>
+          </td>
+          <td style="white-space: nowrap; width: 1%;">
+            <button type="button" class="tabledit-save-button btn btn-sm btn-danger" (click)="deleteSku(eachSku,i)"><i
+                class="font-icon font-icon-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

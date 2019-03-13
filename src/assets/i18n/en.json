@@ -1,0 +1,13 @@
+{
+  "SKU": {
+    "NAME": "Name",
+    "Manufacturer": "Manufacturer  ",
+    "Form": "Form",
+    "MRP": "MRP",
+    "InStock": "InStock",
+    "Schedule": "Schedule"
+  },
+  "Sidebar": {
+    "Dashboard": "Dashboard"
+  }
+}

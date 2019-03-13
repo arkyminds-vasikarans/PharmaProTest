@@ -1,0 +1,19 @@
+{
+  "PAGES": {
+    "HOME": {
+      "TITLE": "App works !"
+    }
+  },
+  "HOME": {
+    "HELLO": "hello"
+  },
+  "Sale": "बिक्री",
+  "SKU":{
+    "NAME":"नाम",
+    "Manufacturer":"उत्पादक",
+    "Form":"प्रपत्र",
+    "MRP":"मूल्य",
+    "InStock":"स्टॉक में",
+    "Schedule":"अनुसूची"
+  }
+} 

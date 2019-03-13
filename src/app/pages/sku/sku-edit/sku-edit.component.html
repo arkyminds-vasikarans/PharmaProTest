@@ -1,0 +1,72 @@
+<div class="row card" style="width: 100%;">
+  <header class="card-header">
+    <button type="button" class="tabledit-save-button btn btn-sm btn-primary" (click)="back()">
+      <i class="glyphicon glyphicon-arrow-left"></i>&nbsp;Back
+    </button>
+    {{mode}} Sku
+    <div class="float-right">
+
+      <button *ngIf="mode=='Edit'" type="button" class="tabledit-save-button btn btn-sm btn-primary" (click)="save()">
+        Save
+      </button>
+      <button *ngIf="mode=='Create'" type="button" class="tabledit-save-button btn btn-sm btn-primary"
+        (click)="createSku()">
+        Create
+      </button>
+      &nbsp;
+      <button type="button" class="tabledit-save-button btn btn-sm btn-info" (click)="reset()">
+        <i class="panel-control-icon glyphicon glyphicon-refresh"></i>
+      </button>
+
+    </div>
+  </header>
+  <div class="card-block">
+
+    <div class="row">
+
+
+      <div class="col-md-4 col-sm-6">
+        <fieldset class="form-group">
+          <label class="form-label" for="exampleInputDisabled">Sku ID</label>
+          <input type="email" class="form-control" id="exampleInputDisabled" placeholder="First Name"
+            [(ngModel)]="sku.SkuId" disabled="">
+        </fieldset>
+      </div>
+      <div class="col-lg-4">
+        <fieldset class="form-group">
+          <label class="form-label semibold" for="exampleInput">Sku Name</label>
+          <input type="text" class="form-control" id="exampleInput" placeholder="First Name" [(ngModel)]="sku.SkuName">
+          <small class="text-muted">We'll never share your email with anyone else.</small>
+        </fieldset>
+      </div>
+      <div class="col-lg-4">
+        <fieldset class="form-group">
+          <label class="form-label" for="exampleInputEmail1">Manufacturer</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"
+            value="mail@mail.com" [(ngModel)]="sku.Manufacturer">
+        </fieldset>
+      </div>
+      <div class="col-lg-4">
+        <fieldset class="form-group">
+          <label class="form-label" for="exampleInputPassword1">MRP</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            [(ngModel)]="sku.MRP">
+        </fieldset>
+      </div>
+      <div class="col-lg-4">
+        <fieldset class="form-group">
+          <label class="form-label" for="exampleInputPassword1">HSN</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            [(ngModel)]="sku.HSN">
+        </fieldset>
+      </div>
+      <div class="col-lg-4">
+        <fieldset class="form-group">
+          <label class="form-label" for="exampleInputPassword1">GST</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Password"
+            [(ngModel)]="sku.GST">
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
